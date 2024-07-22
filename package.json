@@ -1,0 +1,9 @@
+{
+  "name": "tsemo",
+  "version": "1",
+  "description": "Tse mono repo",
+  "main": "index.js",
+  "repository": "git@github.com:tseringn/tsemo.git",
+  "author": "tser <thetseringnorbu@gmail.com>",
+  "private": true
+}
