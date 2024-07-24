@@ -6,5 +6,8 @@
   "repository": "git@github.com:tseringn/tsemo.git",
   "author": "tser <thetseringnorbu@gmail.com>",
   "private": true,
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@4.3.1",
+  "workspaces": [
+    "apps/*"
+  ]
 }
