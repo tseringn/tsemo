@@ -1,0 +1,24 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="baseTexture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="5" seed="5" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.4 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="smallPits">
+      <feTurbulence type="turbulence" baseFrequency="0.2" numOctaves="3" seed="10" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.1 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="weatheringLines">
+      <feTurbulence type="turbulence" baseFrequency="0.01 0.05" numOctaves="2" seed="15" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.15 0"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#5D6D7E"/>
+  <rect width="100%" height="100%" filter="url(#baseTexture)" opacity="1"/>
+  <rect width="100%" height="100%" filter="url(#smallPits)" opacity="0.8"/>
+  <rect width="100%" height="100%" filter="url(#weatheringLines)" opacity="0.7"/>
+</svg>

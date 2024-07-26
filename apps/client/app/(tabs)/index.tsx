@@ -11,10 +11,7 @@ export default function HomeScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
-        <Image
-          source={require("@/assets/images/partial-react-logo.png")}
-          style={styles.reactLogo}
-        />
+        <Image source={require("@/assets/images/sandpaper.svg")} style={styles.reactLogo} />
       }
     >
       <ThemedView style={styles.titleContainer}>
@@ -33,16 +30,10 @@ export default function HomeScreen() {
       </ThemedView>
       <ThemedView style={styles.instructionsContainer}>
         <ThemedText type="subtitle">How to play?</ThemedText>
-        <ThemedText>There is one king and seven queens.</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.instructionsContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
-          When you're ready, run{" "}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{" "}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{" "}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+          There is one king and seven queens. The goal of queens is to imprison King by surrounding
+          the King by two steps every direction. The goal of the King is to kick out all the queens
+          by jumping over a queen.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -64,6 +55,6 @@ const styles = StyleSheet.create({
     width: 290,
     bottom: 0,
     left: 0,
-    position: "absolute",
+    objectFit: "fill",
   },
 });
