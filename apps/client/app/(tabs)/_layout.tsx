@@ -24,6 +24,15 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "How to play",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? "info" : "info"} color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
